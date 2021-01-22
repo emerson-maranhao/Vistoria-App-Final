@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorControlNormal"
+    tools:context=".presentation.ui.detail.SurveyDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorPrimaryDark"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutInfo"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@color/barTitle"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/informacoes_do_veiculo_detail"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_placa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/placa_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutInfo" />
+
+
+        <EditText
+            android:id="@+id/edt_placa_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:longClickable="false"
+            android:singleLine="true"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/edt_renavam_detail"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="@+id/tv_placa"
+            app:layout_constraintTop_toBottomOf="@+id/tv_placa"
+            tools:text="JXS0855" />
+
+        <TextView
+            android:id="@+id/tv_renavam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/renavam_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_placa"
+            app:layout_constraintTop_toTopOf="@+id/tv_placa" />
+
+        <EditText
+            android:id="@+id/edt_renavam_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:longClickable="false"
+            android:singleLine="true"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_renavam"
+            app:layout_constraintTop_toBottomOf="@+id/tv_renavam"
+            tools:text="AM" />
+
+        <TextView
+            android:id="@+id/tv_uf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uf_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_placa_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_placa_detail" />
+
+        <EditText
+            android:id="@+id/edt_uf_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:singleLine="true"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_placa_detail"
+            app:layout_constraintStart_toStartOf="@+id/tv_uf"
+            app:layout_constraintTop_toBottomOf="@+id/tv_uf"
+            tools:text="VW/FOX 1.0" />
+
+        <TextView
+            android:id="@+id/tv_marca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/marca_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_renavam_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_renavam_detail" />
+
+        <EditText
+            android:id="@+id/edt_marca_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_renavam_detail"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/tv_marca"
+            app:layout_constraintTop_toBottomOf="@+id/tv_marca"
+            tools:text="AUTOMÓVEL" />
+
+        <TextView
+            android:id="@+id/tv_tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tipo_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_uf_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_uf_detail" />
+
+
+        <EditText
+            android:id="@+id/edt_tipo_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_uf_detail"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/tv_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tipo"
+            tools:text="VERMELHA" />
+
+        <TextView
+            android:id="@+id/tv_cor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cor_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_marca_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_marca_detail" />
+
+        <EditText
+            android:id="@+id/edt_cor_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_marca_detail"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/tv_cor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cor"
+            tools:text="PASSAGEIRO" />
+
+        <TextView
+            android:id="@+id/tv_especie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/especie_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_tipo_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_tipo_detail" />
+
+        <EditText
+            android:id="@+id/edt_especie_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_tipo_detail"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/tv_especie"
+            app:layout_constraintTop_toBottomOf="@+id/tv_especie"
+            tools:text="2007/2008" />
+
+        <TextView
+            android:id="@+id/tv_ano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ano_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_cor_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_cor_detail" />
+
+        <EditText
+            android:id="@+id/edt_ano_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_cor_detail"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/tv_ano"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ano"
+            tools:text="PASSAGEIRO" />
+
+
+        <TextView
+            android:id="@+id/tv_motor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_motor_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_especie_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_especie_detail" />
+
+
+        <EditText
+            android:id="@+id/edt_motor_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/edt_ano_detail"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/tv_motor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_motor"
+            tools:text="CCRAF0869" />
+
+        <TextView
+            android:id="@+id/tv_chassi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_chassi_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edt_motor_detail"
+            app:layout_constraintTop_toBottomOf="@+id/edt_motor_detail" />
+
+        <EditText
+            android:id="@+id/edt_chassi_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:longClickable="false"
+            android:textColor="#909090"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edt_motor_detail"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_chassi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chassi"
+            tools:text="9BWJB45UXKP009659" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/barTitle"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_chassi_detail">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/fotos_do_veiculo_detail"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_chassi_veiculo_add"
+            android:layout_width="111dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#fff"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutPhotos">
+
+            <ImageView
+                android:id="@+id/img_chassi_veiculo_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#ccc"
+                android:contentDescription="Imagem do Chassi"
+                android:onClick="openAlbum"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_a_photo_24px" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_motor_veiculo_detail"
+            android:layout_width="111dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/card_chassi_veiculo_add"
+            app:layout_constraintStart_toStartOf="@+id/card_chassi_veiculo_add"
+            app:layout_constraintTop_toBottomOf="@+id/card_chassi_veiculo_add">
+
+            <ImageView
+                android:id="@+id/img_motor_veiculo_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#ccc"
+                android:contentDescription="Imagem do Motor"
+                android:onClick="openAlbum"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_a_photo_24px" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_traseira_veiculo_detail"
+            android:layout_width="111dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/card_motor_veiculo_detail"
+            app:layout_constraintStart_toStartOf="@+id/card_motor_veiculo_detail"
+            app:layout_constraintTop_toBottomOf="@+id/card_motor_veiculo_detail">
+
+            <ImageView
+                android:id="@+id/img_traseira_veiculo_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#ccc"
+                android:contentDescription="Imagem da Traseira do Veículo"
+                android:onClick="openAlbum"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_a_photo_24px" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_chassis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/n_chassi_obs_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/card_chassi_veiculo_add"
+            app:layout_constraintTop_toTopOf="@+id/card_chassi_veiculo_add" />
+
+        <TextView
+            android:id="@+id/tv_engine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/n_motor_obs_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/card_motor_veiculo_detail"
+            app:layout_constraintTop_toTopOf="@+id/card_motor_veiculo_detail" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_front"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="Frente do Veículo"-->
+        <!--            android:textColor="#000000"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/img_frente_veiculo"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/img_frente_veiculo" />-->
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/traseira_do_veiculo_obs_detail"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/card_traseira_veiculo_detail"
+            app:layout_constraintTop_toTopOf="@+id/card_traseira_veiculo_detail" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_odometer"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="@string/odometro_obs_detail"-->
+        <!--            android:textColor="#000000"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/img_odometro_veiculo_add"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/img_odometro_veiculo_add" />-->
+
+        <EditText
+            android:id="@+id/edt_obs_chassi_detail"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_corner_edit"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textColor="#909090"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_chassis"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chassis"
+            tools:text="Chassi raspado" />
+
+        <EditText
+            android:id="@+id/edt_obs_motor_detail"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner_edit"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textColor="#909090"
+            app:layout_constraintEnd_toEndOf="@+id/edt_obs_chassi_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_engine"
+            app:layout_constraintTop_toBottomOf="@+id/tv_engine"
+            tools:text="Não foi possível identificar a numeração." />
+
+        <EditText
+            android:id="@+id/edt_obs_traseira_detail"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_corner_edit"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textColor="#909090"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_back"
+            app:layout_constraintTop_toBottomOf="@+id/tv_back"
+            tools:text="" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPendency"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/barTitle"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_obs_traseira_detail">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/pendencia_detail"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleElectricPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Parte Elétrica"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutPendency" />
+
+        <TextView
+            android:id="@+id/statusElectricPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Selecione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleElectricPendency" />
+
+        <TextView
+            android:id="@+id/titleExternalPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Parte Externa"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusElectricPendency" />
+
+        <TextView
+            android:id="@+id/statusExternalPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Selecione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleExternalPendency" />
+
+        <TextView
+            android:id="@+id/titleInternalPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Parte Interna"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusExternalPendency" />
+
+        <TextView
+            android:id="@+id/statusInternalPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Selecione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleInternalPendency" />
+
+        <TextView
+            android:id="@+id/titleMandatoryPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Uso Obrigatório"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusInternalPendency" />
+
+        <TextView
+            android:id="@+id/statusMandatoryPendency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Selecione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleMandatoryPendency" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPlace"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/barTitle"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusMandatoryPendency">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/local_vistoria_detail"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutPlace">
+
+            <RadioButton
+                android:id="@+id/radioParqueamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/parqueamento_detail" />
+
+            <RadioButton
+                android:id="@+id/radioDetran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detran_sede_detail" />
+
+            <RadioButton
+                android:id="@+id/radioOutro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/outro_detail" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edt_outro_local"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/digite_outro_local_detail"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroupPlace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroupPlace"
+            tools:visibility="invisible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

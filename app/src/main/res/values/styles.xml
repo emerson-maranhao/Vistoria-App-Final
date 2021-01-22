@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="dividerHorizontal">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+
+    </style>
+
+    <!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/darker_gray</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <!--    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">-->
+    <!--        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>-->
+    <!--        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>-->
+    <!--        <item name="radioButtonStyle">@style/RadioButtonStyle</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">-->
+    <!--        <item name="android:textColor">?attr/colorAccent</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">-->
+    <!--        <item name="android:textColor">?attr/colorAccent</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">-->
+    <!--        <item name="android:textColor">@color/reprovada</item>-->
+    <!--    </style>-->
+
+
+</resources>

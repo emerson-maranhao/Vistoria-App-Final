@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Theme Aplication-->
+    <color name="colorPrimary">#101d25</color>
+    <color name="colorPrimaryDark">#232d36</color>
+    <color name="colorAccent">#ec802e</color>
+    <color name="barTitle">#282f8a</color>
+
+    <!--    Status Colors-->
+    <color name="aprovada">#008000</color>
+    <color name="pendente">#E47833</color>
+    <color name="reprovada">#ff0000</color>
+
+    <color name="shimmer_bg">#dddddd</color>
+    <color name="dialogBackground">#60000000</color>
+    <color name="textArea">#232d36</color>
+
+
+</resources>

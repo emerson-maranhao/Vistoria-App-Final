@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Vistoria App</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <string name="menu_home">Minhas Vistorias</string>
+    <string name="menu_settings">Configurações</string>
+    <string name="menu_about">Sobre</string>
+    <string name="menu_logout">Sair</string>
+
+    //HOME ACTIVITY
+
+    <string name="minhas_vistorias">Minhas Vistorias</string>
+    <string name="sem_vistoria">Você ainda não tem nenhuma vistoria cadastrada, mas é muito fácil aqui.</string>
+    <string name="vamos_comecar">Vamos começar!</string>
+    <string name="alert_press_again_to_exit">Clique novamente no voltar para Sair!</string>
+
+
+    //LOGIN ACTIVITY
+    <string name="cpf">CPF</string>
+    <string name="senha">Senha</string>
+    <string name="cpf_mask">###.###.###-##</string>
+    <string name="entrar">Entrar</string>
+    <string name="usuario_senha_em_branco">Usuário o senha em branco!</string>
+    <string name="cpf_senha_invalidos">CPF ou Senha inválidos!</string>
+
+    //ADD ACTIVITY
+    <string name="nova_vistoria_activity">Nova Vistoria</string>
+    <string name="placa">Placa</string>
+    <string name="uf">UF</string>
+    <string name="renavam">Renavam</string>
+    <string name="marca">Marca</string>
+    <string name="cor">Cor</string>
+    <string name="ano">Ano</string>
+    <string name="n_chassi">Nº Chassi</string>
+    <string name="n_motor">Nº Motor</string>
+    <string name="especie">Espécie</string>
+    <string name="tipo">Tipo</string>
+    <string name="fotos_do_veiculo">Fotos do Veículo</string>
+    <string name="n_chassi_obs">Nº Chassi</string>
+    <string name="n_motor_obs">Nº Motor</string>
+    <string name="traseira_do_veiculo_obs">Traseira</string>
+    <string name="local_vistoria">Local Vistoria</string>
+    <string name="pendencia">Pendência</string>
+    <string name="digite_outro_local">Digite outro local…</string>
+    <string name="parqueamento">Parqueamento</string>
+    <string name="detran_sede">Detran-Sede</string>
+    <string name="outro">Outro</string>
+    <string name="informacoes_do_veiculo">Informações do Veículo</string>
+    <string name="salvar">Salvar</string>
+
+    <string name="nao_possui">NÃO DISPONÍVEL</string>
+    <string name="imagens_obrigatorias">Todas as imagens são obrigatorias!</string>
+    <string name="outro_local_vazio">Campo Outro local não pode ser vazio!</string>
+    <string name="status_vistoria">Status da Vistoria</string>
+    <string name="aprovada">Aprovada</string>
+    <string name="pendente">Pendente</string>
+    <string name="reprovada">Reprovada</string>
+    <string name="ok">OK</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="atencao">Atenção</string>
+    <string name="todos_dados_serao_perdidos">Todos os dados serão perdidos! Deseja continuar?</string>
+    <string name="file_provider">br.gov.am.detran.appvistoria.fileprovider</string>
+
+    //SEARCH
+    <string name="consulta_vehicle_activity">Consulta Veículo</string>
+    <string name="placa_search">Placa</string>
+    <string name="chassi_search">Chassi</string>
+    <string name="buscar_search">Buscar</string>
+    <string name="ou">ou</string>
+
+    //DETAIL
+    <string name="detalhes_activity">Detalhes</string>
+    <string name="placa_detail">Placa</string>
+    <string name="uf_detail">UF</string>
+    <string name="renavam_detail">Renavam</string>
+    <string name="marca_detail">Marca</string>
+    <string name="cor_detail">Cor</string>
+    <string name="ano_detail">Ano</string>
+    <string name="n_chassi_detail">Nº Chassi</string>
+    <string name="n_motor_detail">Nº Motor</string>
+    <string name="especie_detail">Espécie</string>
+    <string name="tipo_detail">Tipo</string>
+    <string name="fotos_do_veiculo_detail">Fotos do Veículo</string>
+    <string name="n_chassi_obs_detail">Nº Chassi</string>
+    <string name="n_motor_obs_detail">Nº Motor</string>
+    <string name="traseira_do_veiculo_obs_detail">Traseira</string>
+    <string name="local_vistoria_detail">Local Vistoria</string>
+    <string name="pendencia_detail">Pendência</string>
+    <string name="digite_outro_local_detail">Digite outro local…</string>
+    <string name="parqueamento_detail">Parqueamento</string>
+    <string name="detran_sede_detail">Detran-Sede</string>
+    <string name="outro_detail">Outro</string>
+    <string name="informacoes_do_veiculo_detail">Informações do Veículo</string>
+    <string name="nenhuma_obs">Nenhuma observação</string>
+
+    <string name="no_network_connectivity">No Network Connectivity</string>
+
+    //INFO FRAGMENT
+    <string name="info_description">O App Vistoria foi desenvolvido para facilitar a vida do vistoriador ao efetuar vistorias dos veículos apreendidos. Nele o vistoriador cadastra vistorias de maneira rápida e prática, realizar a busca dos dados de forma segura e confiável, de modo a tornar a trabalho mais celere e eficiente.</string>
+
+
+
+    <string name="info_year">2020–2021</string>
+    <string name="info_version">Versão 1.0</string>
+    <string name="placa_chassi_vazio">Placa e chassi vazios!</string>
+    <string name="input_only_one_field">Digite somente a placa ou chassi!</string>
+    <string name="invalid_license_plate">Placa inválida</string>
+
+
+</resources>
